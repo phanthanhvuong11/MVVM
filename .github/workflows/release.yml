@@ -27,7 +27,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build release APK
-        run: ./gradlew assembleRelease
+        run: ./gradlew assembleDebug
 
       - name: Get app version from build.gradle
         id: get_version
