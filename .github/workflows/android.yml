@@ -1,0 +1,33 @@
+name: Android Build Check
+
+on:
+  pull_request:
+    branches: [main, develop, master]
+
+jobs:
+  build:
+    name: Build on Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧾 Checkout code
+        uses: actions/checkout@v3
+
+      - name: ☕ Setup JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: 17
+
+      - name: 🧰 Setup Gradle
+        uses: gradle/gradle-build-action@v2
+
+      - name: ⚙️ Grant permission to execute gradlew
+        run: chmod +x ./gradlew
+
+      - name: 🔨 Build Debug APK
+        run: ./gradlew assembleDebug
+
+      # Optional: run tests
+      - name: ✅ Run Unit Tests
+        run: ./gradlew testDebug
