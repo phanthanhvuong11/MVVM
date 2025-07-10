@@ -70,6 +70,12 @@ android {
         buildConfig = true
     }
 
+    tasks.register("printVersionName") {
+        doLast {
+            println(android.defaultConfig.versionName)
+        }
+    }
+
     applicationVariants.all {
         when (name) {
             "debug" -> {
