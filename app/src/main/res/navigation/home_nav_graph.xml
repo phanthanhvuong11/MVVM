@@ -3,12 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_nav_graph"
-    app:startDestination="@id/coinFragment">
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.androidbaseproject.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login"
+        app:defaultNavHost="true"/>
 
     <fragment
         android:id="@+id/coinFragment"
         android:name="com.example.androidbaseproject.ui.coin.CoinFragment"
         android:label="CoinFragment"
-        tools:layout="@layout/fragment_coin"
-        app:defaultNavHost="true"/>
+        tools:layout="@layout/fragment_coin"/>
 </navigation>

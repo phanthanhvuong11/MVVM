@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">AndroidBaseProject</string>
+    
+    <!-- Login Screen -->
+    <string name="app_logo">App Logo</string>
+    <string name="welcome_back">Chào mừng trở lại!</string>
+    <string name="login_subtitle">Đăng nhập để tiếp tục</string>
+    <string name="email">Email</string>
+    <string name="password">Mật khẩu</string>
+    <string name="login">Đăng nhập</string>
+    <string name="forgot_password">Quên mật khẩu?</string>
+    <string name="dont_have_account">Chưa có tài khoản?</string>
+    <string name="sign_up">Đăng ký</string>
 </resources>
