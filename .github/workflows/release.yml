@@ -56,7 +56,7 @@ jobs:
           git push origin v${{ steps.get_version.outputs.VERSION }}
 
       - name: Build release APK
-        run: ./gradlew assembleRelease
+        run: ./gradlew assembleDebug
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
